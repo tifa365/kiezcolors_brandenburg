@@ -23,19 +23,17 @@
         class="underline"
         target="_blank"
         rel="noreferrer"
-        href="https://daten.berlin.de/datensaetze/alkis-berlin-tatsächliche-nutzung-wfs"
+        href="https://geobroker.geobasis-bb.de/gbss.php?MODE=GetProductInformation&PRODUCTID=bae0ad3a-c237-44c2-9e39-4f9f3e1d3aad"
       >
-        ALKIS Berlin Tatsächliche Nutzung
+        ALKIS Brandenburg - Nutzung
       </a>
       |
       <a
         class="underline"
         target="_blank"
         rel="noreferrer"
-        href="https://www.berlin.de/sen/sbw/">SenSBW</a
+        href="https://geobasis-bb.de/">GeoBasis-BB</a
       >
-      <!-- ,
-      {$lang === "en" ? "published under:" : "veröffentlicht unter"} -->
       |
       <a
         class="underline"
