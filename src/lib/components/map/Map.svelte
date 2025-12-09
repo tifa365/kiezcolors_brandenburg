@@ -112,8 +112,8 @@
       hash: true,
       minZoom: 10,
       maxZoom: 14,
-      center: [13.4, 52.52],
-      zoom: 11,
+      center: [11.863, 53.07562],
+      zoom: 13,
     });
 
     map.on("load", function () {

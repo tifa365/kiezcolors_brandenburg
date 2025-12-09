@@ -31,30 +31,18 @@ DATA_DIR = Path(__file__).parent.parent / "data"
 OUTPUT_GML = DATA_DIR / "alkis_bb.gml"
 OUTPUT_GEOJSON = DATA_DIR / "alkis_bb.geojson"
 
-# Brandenburg bbox - we'll download in chunks due to 100k feature limit
+# Brandenburg bbox - download in small chunks to stay under 100k feature limit
 # Format: (minx, miny, maxx, maxy) in EPSG:25833 (native CRS)
-CHUNKS = [
-    # West Brandenburg
-    (280000, 5700000, 350000, 5800000),
-    (280000, 5800000, 350000, 5900000),
-    (280000, 5900000, 350000, 6000000),
-    # Central-West
-    (350000, 5700000, 420000, 5800000),
-    (350000, 5800000, 420000, 5900000),
-    (350000, 5900000, 420000, 6000000),
-    # Central
-    (420000, 5700000, 490000, 5800000),
-    (420000, 5800000, 490000, 5900000),
-    (420000, 5900000, 490000, 6000000),
-    # Central-East
-    (490000, 5700000, 560000, 5800000),
-    (490000, 5800000, 560000, 5900000),
-    (490000, 5900000, 560000, 6000000),
-    # East Brandenburg
-    (560000, 5700000, 630000, 5800000),
-    (560000, 5800000, 630000, 5900000),
-    (560000, 5900000, 630000, 6000000),
-]
+# Brandenburg roughly: X 260000-500000, Y 5700000-5950000
+def generate_chunks():
+    """Generate smaller chunks (35km x 50km) to stay under 100k limit."""
+    chunks = []
+    for x in range(260000, 510000, 35000):  # 35km steps
+        for y in range(5700000, 5960000, 50000):  # 50km steps
+            chunks.append((x, y, x + 35000, y + 50000))
+    return chunks
+
+CHUNKS = generate_chunks()
 
 
 def download_chunk(minx: float, miny: float, maxx: float, maxy: float, output_path: Path) -> bool:

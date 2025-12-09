@@ -125,6 +125,8 @@ def generate_tiles(geojson_path: Path):
         "-B", "10",
         "--minimum-zoom=10",
         "--maximum-zoom=13",
+        "--no-feature-limit",
+        "--no-tile-size-limit",
         str(geojson_path),
     ]
 

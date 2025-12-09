@@ -4,14 +4,14 @@
 "version": "2",
 "minzoom": "10",
 "maxzoom": "13",
-"center": "14.348145,51.767838,13",
-"bounds": "11.690777,51.423620,14.765748,53.559062",
-"antimeridian_adjusted_bounds": "11.690777,51.423620,14.765748,53.559062",
+"center": "14.523926,52.335337,13",
+"bounds": "11.380878,51.423620,14.765748,53.559062",
+"antimeridian_adjusted_bounds": "11.380878,51.423620,14.765748,53.559062",
 "type": "overlay",
-"strategies": "[{},{},{},{},{},{},{},{},{},{},{\"detail_reduced\":12,\"tiny_polygons\":113857,\"tile_size_desired\":846526},{\"tiny_polygons\":23628},{\"tiny_polygons\":7563},{\"tiny_polygons\":2665}]",
+"strategies": "[{},{},{},{},{},{},{},{},{},{},{\"tiny_polygons\":124830},{\"tiny_polygons\":45412},{\"tiny_polygons\":14726},{\"tiny_polygons\":5285}]",
 "tippecanoe_decisions": "{\"basezoom\":10,\"droprate\":2.5,\"retain_points_multiplier\":1}",
 "format": "pbf",
 "generator": "tippecanoe v2.79.0",
-"generator_options": "tippecanoe --output-to-directory /Users/tim/Projekte/kiezcolors/static/tiles '--layer=alkis' --no-tile-compression --force -B 10 '--minimum-zoom=10' '--maximum-zoom=13' /Users/tim/Projekte/kiezcolors/data/alkis_bb_converted.geojson",
-"json": "{\"vector_layers\":[{\"id\":\"alkis\",\"description\":\"\",\"minzoom\":10,\"maxzoom\":13,\"fields\":{\"bezeich\":\"String\"}}],\"tilestats\":{\"layerCount\":1,\"layers\":[{\"layer\":\"alkis\",\"count\":593033,\"geometry\":\"Polygon\",\"attributeCount\":1,\"attributes\":[{\"attribute\":\"bezeich\",\"count\":24,\"type\":\"string\",\"values\":[\"AX_Bahnverkehr\",\"AX_FlaecheBesondererFunktionalerPraegung\",\"AX_FlaecheGemischterNutzung\",\"AX_Fliessgewaesser\",\"AX_Flugverkehr\",\"AX_Friedhof\",\"AX_Gehoelz\",\"AX_Hafenbecken\",\"AX_Halde\",\"AX_Heide\",\"AX_IndustrieUndGewerbeflaeche\",\"AX_Landwirtschaft\",\"AX_Moor\",\"AX_Platz\",\"AX_Schiffsverkehr\",\"AX_SportFreizeitUndErholungsflaeche\",\"AX_StehendesGewaesser\",\"AX_Strassenverkehr\",\"AX_Sumpf\",\"AX_TagebauGrubeSteinbruch\",\"AX_UnlandVegetationsloseFlaeche\",\"AX_Wald\",\"AX_Weg\",\"AX_Wohnbauflaeche\"]}]}]}}"
+"generator_options": "tippecanoe --output-to-directory /Users/tim/Projekte/kiezcolors/static/tiles '--layer=alkis' --no-tile-compression --force -B 10 '--minimum-zoom=10' '--maximum-zoom=13' --no-feature-limit --no-tile-size-limit /Users/tim/Projekte/kiezcolors/data/alkis_bb_converted.geojson",
+"json": "{\"vector_layers\":[{\"id\":\"alkis\",\"description\":\"\",\"minzoom\":10,\"maxzoom\":13,\"fields\":{\"bezeich\":\"String\"}}],\"tilestats\":{\"layerCount\":1,\"layers\":[{\"layer\":\"alkis\",\"count\":1241522,\"geometry\":\"Polygon\",\"attributeCount\":1,\"attributes\":[{\"attribute\":\"bezeich\",\"count\":24,\"type\":\"string\",\"values\":[\"AX_Bahnverkehr\",\"AX_FlaecheBesondererFunktionalerPraegung\",\"AX_FlaecheGemischterNutzung\",\"AX_Fliessgewaesser\",\"AX_Flugverkehr\",\"AX_Friedhof\",\"AX_Gehoelz\",\"AX_Hafenbecken\",\"AX_Halde\",\"AX_Heide\",\"AX_IndustrieUndGewerbeflaeche\",\"AX_Landwirtschaft\",\"AX_Moor\",\"AX_Platz\",\"AX_Schiffsverkehr\",\"AX_SportFreizeitUndErholungsflaeche\",\"AX_StehendesGewaesser\",\"AX_Strassenverkehr\",\"AX_Sumpf\",\"AX_TagebauGrubeSteinbruch\",\"AX_UnlandVegetationsloseFlaeche\",\"AX_Wald\",\"AX_Weg\",\"AX_Wohnbauflaeche\"]}]}]}}"
 }
