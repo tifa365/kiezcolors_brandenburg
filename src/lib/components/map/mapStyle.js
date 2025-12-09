@@ -1,4 +1,5 @@
 import { landuses, categories } from '$lib/stores.js';
+import brandenburgGeojson from '$lib/assets/brandenburg.js';
 
 const landuseColors = [];
 
@@ -31,15 +32,11 @@ export default function (location) {
 				tiles: [location + 'tiles/{z}/{x}/{y}.pbf'],
 				minzoom: 10,
 				maxzoom: 13
-				// bounds: [5.625, 47.309, 15.6, 55.354]
+			},
+			'brandenburg-border': {
+				type: 'geojson',
+				data: brandenburgGeojson()
 			}
-			// ,
-			// 'borders-source': {
-			// 	type: 'vector',
-			// 	tiles: [window.location.origin + window.location.pathname + 'data/tiles/{z}/{x}/{y}.pbf'],
-			// 	minzoom: 0,
-			// 	maxzoom: 7
-			// }
 		},
 		layers: [
 			{
@@ -97,6 +94,16 @@ export default function (location) {
 					'raster-opacity': 0.7
 				},
 				minzoom: 0
+			},
+			{
+				id: 'brandenburg-border',
+				type: 'line',
+				source: 'brandenburg-border',
+				paint: {
+					'line-color': '#2f2fa2',
+					'line-width': 2,
+					'line-opacity': 0.8
+				}
 			}
 		]
 		// ,
