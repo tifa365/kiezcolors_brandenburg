@@ -108,3 +108,7 @@ dist
 .tern-port
 
 .svelte-kit/
+
+# ALKIS source data (too large for git, only needed for tile generation)
+data/*.gml
+data/*.geojson
