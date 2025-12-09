@@ -104,17 +104,16 @@
       container: "map", // container id
       style: mapStyle(window.location.origin + window.location.pathname),
       maxBounds: [
-        [13.046434258466917, 52.30190843622876],
-        [13.820874468731887, 52.69894396430871],
+        [11.2, 51.35],
+        [14.77, 53.56],
       ],
       dragRotate: false,
       attributionControl: false,
-      // bounds: [13.3682291, 52.4827923, 13.4914434, 52.5310256],
       hash: true,
       minZoom: 10,
       maxZoom: 14,
-      center: [13.3915, 52.49899],
-      zoom: 13,
+      center: [13.4, 52.52],
+      zoom: 11,
     });
 
     map.on("load", function () {
@@ -195,7 +194,7 @@
       contributors &copy; |
     {/if}
 
-    Geoportal Berlin / ALKIS Berlin
+    GeoBasis-BB / ALKIS Brandenburg
   </div>
 
   <div
