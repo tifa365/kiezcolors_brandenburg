@@ -23,11 +23,11 @@ https://observablehq.com/@d3/treemap
     mapCenter,
     circleRadius,
   } from "$lib/stores.js";
-  import geojson from "$lib/assets/berlin.js";
+  import geojson from "$lib/assets/brandenburg.js";
 
   let projection;
-  let berlin = geojson();
-  berlin = berlin;
+  let brandenburg = geojson();
+  brandenburg = brandenburg;
 
   let treemap;
   function sumByCount(d) {
@@ -207,12 +207,12 @@ https://observablehq.com/@d3/treemap
     let mapWidth = 50;
     let mapHeight = 50;
 
-    projection = d3.geoMercator().fitSize([mapWidth, mapHeight], berlin);
+    projection = d3.geoMercator().fitSize([mapWidth, mapHeight], brandenburg);
     const path = d3.geoPath().projection(projection);
 
     map
       .selectAll("path")
-      .data(berlin.features)
+      .data(brandenburg.features)
       .enter()
       .append("path")
       .attr("d", path)
